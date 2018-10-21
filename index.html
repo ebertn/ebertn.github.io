@@ -1,0 +1,21 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    while(true){
+        $.get(
+            "http://127.0.0.1:5000/output",
+            function(data) {
+                console.log('page content: ' + data);
+            }
+        );
+        sleep(5000)
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+</script>
+
+</html>
